@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <label for="username"></label>
+        {{form.username.label}}{{form.username}}
+        <br>
+        <label for="password"></label>
+        {{form.password.label}}{{form.password}}
+        <br>
+        {{form.submit}}
+        <p>If you have not signed up, click below to sign up</p>
+        <a href="{{url_for('sign_up')}}">Sign up here</a>
+    </form>
+</body>
+</html>
